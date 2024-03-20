@@ -1,0 +1,16 @@
+{% extends 'blogs/base.html' %}
+{% block content %}
+    <div class="border rounded-lg bg-dark text-light d-flex flex-column align-items-center" style=" padding: 20px">
+    <h1 style="">Login</h1>
+
+    <form method="POST" style=" margin-bottom: 20px">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Log in">
+    </form>
+
+
+    <p style="">Don`t have an account? <a href="{% url 'register' %}"> Register</a></p>
+{% endblock content %}
+</div>
+

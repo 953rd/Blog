@@ -1,0 +1,8 @@
+{% extends 'blogs/base.html' %}
+{% block content %}
+    <div class="bg-dark border rounded text-light" style="padding: 30px">
+        <h2>Post</h2>
+        <h3>{{ post.title }} - {{ post.date_added }}</h3>
+        <p>{{ post.context }}</p>
+    </div>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'blogs/base.html' %}
+{% block content %}
+    <div class="bg-dark border rounded text-light" style="padding: 30px">
+        <h3>Post form</h3>
+        <a href="{% url 'posts' %}">Go back</a>
+        <form method="POST" action="" style="padding-top: 20px">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+{% endblock content %}
